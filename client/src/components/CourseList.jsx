@@ -97,7 +97,7 @@ const CourseList = (props) => {
                             Update
                         </Button>
                     </TableCell>
-                    {/* <TableCell align="center">
+                    <TableCell align="center">
                         <Button 
                             variant="contained" 
                             color="secondary"
@@ -105,7 +105,7 @@ const CourseList = (props) => {
                             >
                             Delete
                         </Button>
-                    </TableCell> */}
+                    </TableCell>
                 </TableRow>
                 ))}
             </TableBody>
