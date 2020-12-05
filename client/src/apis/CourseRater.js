@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: "http://localhost:3001/api/courses"
+    baseURL: "https://pern-course-rater.herokuapp.com/api/courses"
 })
