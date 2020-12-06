@@ -13,6 +13,7 @@ import { useHistory } from 'react-router-dom';
 import StarRating from './StarRating';
 
 const CourseList = (props) => {
+    console.log(props)
     const {courses, setCourses} = useContext(CoursesContext);
     let history = useHistory()
     useEffect(() => {
@@ -85,7 +86,7 @@ const CourseList = (props) => {
                             color="primary"
                             onClick = {() => handleCourseSelect(course.id)}
                             >
-                            Leave a Review
+                            Reviews
                         </Button>
                     </TableCell>
                     <TableCell align="center">
@@ -98,13 +99,14 @@ const CourseList = (props) => {
                         </Button>
                     </TableCell>
                     <TableCell align="center">
-                        <Button 
+                        {!course.count && (<Button 
                             variant="contained" 
                             color="secondary"
                             onClick = {() => handleDelete(course.id)}
                             >
                             Delete
-                        </Button>
+                        </Button>)
+                        }
                     </TableCell>
                 </TableRow>
                 ))}

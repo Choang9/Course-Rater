@@ -48,6 +48,7 @@ const AddCourse = () => {
                     onChange = {e => setInstructor(e.target.value)}
                 />
                 <Button 
+                    disabled = {!name || !subject || !instructor}
                     variant="contained" 
                     color="primary" 
                     style = {{marginLeft: "70px", marginRight: "70px"}}
